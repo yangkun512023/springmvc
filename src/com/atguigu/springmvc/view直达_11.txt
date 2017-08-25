@@ -1,0 +1,9 @@
+在springmvc.xml中配置 ：
+
+<!-- 配置直接转发的页面 -->
+	<!-- 可以直接相应转发的页面, 而无需再经过 Handler 的方法.  -->
+	<mvc:view-controller path="/success" view-name="success"/>
+	
+	为了之前的 不出错 还要配置:
+	<!-- 在实际开发中通常都需配置 mvc:annotation-driven 标签 -->
+	<mvc:annotation-driven></mvc:annotation-driven>

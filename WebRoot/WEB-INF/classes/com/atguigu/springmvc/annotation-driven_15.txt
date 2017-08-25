@@ -1,0 +1,7 @@
+<mvc:annotation-driven></mvc:annotation-driven>
+此注解 自动加了 3个bean，RequestMappingHandlerMapping   RequestMappingHandlerAdapter  ExceptionhandlerExceptionResolver,以及还支持了  别的 特性  如  conversionService（自定义转换器）
+支持：@NumberFormat annotion @DtaTimeFormat  @Vaild @RequestBody @ ResonseBody
+也就说 加了这个，才支持 格式化 转换 以及 校验 的注解，所以一般情况下 都加上。
+解决了什么问题 ： 如果加了 <mvc:view-controller path="/success" view-name="success"/> 或者 <mvc:default-servlet-handler/> 以及自定义转化器 都要加 
+ 
+<mvc:annotation-driven></mvc:annotation-driven> ，不然就没 这3个bean    RequestMappingHandlerMapping   RequestMappingHandlerAdapter  ExceptionhandlerExceptionResolver，会报错  
